@@ -1,8 +1,13 @@
 """
-Lists Foundations :
-    1. Remove Duplicates (Logic Builder) without and predefined options
-    2. Find the second largest number (without and predefined options)
-    3. Find all even numbers in a list (without and predefined options)
+Lists Foundations :  without and predefined options
+    1. Remove Duplicates 
+    2. Find the second largest number 
+    3. Find all even numbers in a list 
+    4. Reverse a list 
+    5. Find the Frequency of Each Element (using list, loops and not dict)
+    6. Find the Largest Number in a List  
+    7. Find the Smallest Number
+    8. Rotate a List (Right Rotation)
 
 """
 
@@ -12,8 +17,8 @@ Lists Foundations :
     Keep the original order
     Do NOT use set()
     Use a loop and logic
-"""
 
+"""
 # Predefined List
 nums = [1, 2, 2, 3, 4, 4, 5, 1, 6]
 print(
@@ -90,5 +95,169 @@ print(
 
 even_list_1 = [num for num in sample_list if num % 2 == 0]
 print(f"\n\tUsing List comprehension :\n\tList with only even numbers : {even_list_1}\n\n")
+
+# 4. Reverse a list 
+# Method 1 
+# Using loop
+
+# predfefined list
+sample = [10, 0, 8, -20, 15]
+print(f"Reverse the elements in the list : \nOriginal List : {sample}\n\n")
+reversed_list = []
+
+for num in sample:
+    reversed_list.insert(0,num)
+print(
+        f"\tUsing Loops : \n"
+        f"\tReversed List : {reversed_list}\n"
+    )
+
+# Method 2 
+# Using Slicing and step value
+print(
+        f"\n\tUsing Slicing & Step value : \n"
+        f"\tReversed List : {sample[::-1]}\n"
+    )
+
+# Method 3
+# Using reversed() 
+rev_list = list(reversed(sample))
+
+print(
+        f"\n\tUsing list(reversed(list)) : \n"
+        f"\tReversed List : {rev_list}\n"
+    )
+
+# Method 4
+# using list.reverse (Modifies the original list in place)
+
+sample_copy = sample.copy()
+sample_copy.reverse()
+print(
+        f"\n\tUsing list.reverse() : \n"
+        f"\tModifies the original list in place\n"
+        f"\tReversed List : {sample_copy}\n"
+)
+
+
+
+# 5. Find the Frequency of Each Element 
+# Using list and loop logic and not dictionaries
+
+# Predefined list
+nums  = [1,2,2,3,3,3]
+
+number = []
+times = []
+
+for n in nums:
+    if n not in number:
+        number.append(n)
+
+
+for n in number:
+    times.append(nums.count(n))
+    
+frequency = list(zip(number,times))
+print(
+        f"Frequency of each elements in list :\n"
+        f"Original List : {nums}\n"
+        f"\n\tUsing Loop and list :\n"
+        f"\tElements and its frequency : {frequency}\n"
+        )
+
+# 6. Find the Largest Number in a List
+# Method 1
+# Using loop and comparision operator
+
+#Predefined list
+my_list = [10,4,8,20,3]
+large_num = my_list[0]
+
+for n in my_list[1:]:
+    if n > large_num:
+        large_num = n
+        
+print(
+    
+        f"\nFind the Largest Number in a List :\n"
+        f"Original List : {my_list}\n"
+        f"\n\tUsing Loop :\n"
+        f"\tLargest number : {large_num}\n"
+    )
+
+
+# Method 2
+# using max()
+
+print(
+        f"\n\tUsing max() :\n"
+        f"\tLargest number : {max(my_list)}\n"
+    )
+
+# 7. Find the Smallest Number
+# Method 1 
+# using loops and comparison operator
+
+#Predefined list
+n = [10,4,8,20,3]
+smallest = n[0]
+for elements in n[1:]:
+    if elements < smallest:
+        smallest = elements
+        
+print(
+        f"\nFind the smallest Number in a List :\n"
+        f"Original List : {n}\n"
+        f"\n\tUsing Loop :\n"
+        f"\tSmallest number : {smallest}\n"
+    )
+
+# Method 2
+# using min()
+print(
+        f"\n\tUsing min() :\n"
+        f"\tSmallest number : {min(n)}\n"
+    )
+  
+ # 8. Rotate a List (Right Rotation)
+# Method 1
+# Using slicing
+ 
+numbers = [1,2,3,4,5]
+list_length = len(numbers)
+rotated = numbers[(list_length -1):] + numbers[:(list_length -1)]
+print(
+        f"\nRotate a List (Right Rotation) :\n"
+        f"Original List : {numbers}\n"
+        f"\n\tUsing slicing :\n"
+        f"\tRotated List : {rotated}\n"
+    )
+
+# Method 2
+# using Loop
+rotate = []
+length_list = len(numbers)
+rotate.insert(0,numbers[length_list - 1])
+rotate.extend(numbers)
+rotate.pop()
+print(
+        f"\n\tUsing List Operations :\n"
+        f"\tRotated List : {rotate}\n"
+    )
+
+# Method 3
+# Using Loop
+
+# Last element
+last_element = numbers[-1]
+rotated_list = [last_element]
+
+for n in numbers[:-1]:
+    rotated_list.append(n)
+print(
+        f"\n\tUsing Loop :\n"
+        f"\tRotated List : {rotated_list}\n"
+    )
 
 
