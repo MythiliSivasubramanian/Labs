@@ -8,6 +8,7 @@ Lists Foundations :  without and predefined options
     6. Find the Largest Number in a List  
     7. Find the Smallest Number
     8. Rotate a List (Right Rotation)
+    9. Flatten a Nested List
 
 """
 
@@ -261,3 +262,28 @@ print(
     )
 
 
+# 9. Flatten a Nested List
+
+# Predefined nested list
+nested_list = [[1,2],[3,4],[5,6]]
+
+# Method 1
+# using nested loops
+flat_list = []
+for sublist in nested_list:
+    for n in sublist:
+        flat_list.append(n)
+print(
+        f"\nFlatten a Nested List :\n"
+        f"Original Nested List : {nested_list}\n"
+        f"\n\tUsing Loop :\n"
+        f"\tFlat List : {flat_list}\n"
+      )
+
+# Method 2
+# Using List comprehension
+flatten_list = [num for sublist in nested_list for num in sublist]
+print(
+        f"\n\tUsing List Comprehension :\n"
+        f"\tFlat List : {flatten_list}\n"
+      )
