@@ -1,5 +1,11 @@
 # Labs
 
-This repo is for my practice mini labs.
+Practice mini‑labs used to learn concepts before starting mini projects and full projects (kept in separate repos).
 
-I practice the mini labs here before starting my mini project. Later, after I learn the concepts, I will create a new mini projects and projects in separate repos.
+## Structure
+- `01_Python_Labs/` — Python practice labs.
+- `02_SQL_Labs/` — SQL practice labs.
+
+## Workflow
+- Work through small, focused exercises here.
+- Apply what I learn in separate mini‑project and project repositories.
