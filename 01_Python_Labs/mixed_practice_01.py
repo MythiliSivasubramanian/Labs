@@ -43,3 +43,24 @@ final_words = [word.upper() for word in words if len(word) > 5]
 
 print(f"\nList with words greater than 5 & in upper case : {final_words}\n\n")
 
+"""
+Given a predfined dictionary, create a new dictionary that contains:
+    1. ONLY students with marks >= 50  
+    2. Increase their marks by 5 but maximum mark is 100
+
+"""
+
+print(
+         f"\n\nTask 3 :"
+        f"\nGiven a predfined dictionary, create a new dict that contains:\n"
+        f"\t1. ONLY students with marks >= 50\n"
+        f"\t2. Increase their marks by 5 but maximum mark is 100"
+)
+# predefined Dictionary
+students = { "Alice": 85, "Bob": 42, "Charlie": 73, "David": 30, "Eve": 100 }
+print(f"\nPredefined students dictionary : {students}")
+
+
+passed_students = {name : min(mark + 5, 100) for name,mark in  students.items() if mark >= 50}
+
+print(f"\nStudents with marks >= 50 and such marks added by 5 marks but maximum mark is 100: {passed_students}\n\n")
