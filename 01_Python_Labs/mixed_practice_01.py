@@ -57,7 +57,7 @@ print(
         f"List is mutable, changable in place." 
         f"\nIn below code, whenever the car name starts with T, then it is poped." 
         f"\nso the length of the loop is reduced whenever the item is poped."
-        f"\nHence will result in Index out of range error since some items starting with t is popped.\n\n")
+        f"\nHence will result in Index out of range error since some items starting with t is popped.")
 
 
 cars = ["Audi", "Toyota", "Tesla", "BMW"]
@@ -71,3 +71,18 @@ try:
 except IndexError as e:
     print(f"Resulted in error : {e}")
     
+    
+    
+"""
+Alternative method for accomplishing Task 4 
+    1. Using List comprehension
+    2. Creating a copy of lists
+"""
+
+print(f"\nAlternative method for accomplishing Task 4 : \n")
+
+#     1. Using List comprehension
+cars = [car for car in cars if not car.startswith("T")]
+print(f"Lists without car names starting with 'T' : {cars}")
+
+
