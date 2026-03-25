@@ -43,24 +43,31 @@ final_words = [word.upper() for word in words if len(word) > 5]
 
 print(f"\nList with words greater than 5 & in upper case : {final_words}\n\n")
 
-"""
-Given a predfined dictionary, create a new dictionary that contains:
-    1. ONLY students with marks >= 50  
-    2. Increase their marks by 5 but maximum mark is 100
 
+"""
+Task 4 :
+List is mutable, changble in place. 
+In below code, whenever the car name starts with T, then it is poped. 
+pop shrinks the list during iteration
+Hence will result in Index out of range error since some items starting with t is popped.
 """
 
 print(
-         f"\n\nTask 3 :"
-        f"\nGiven a predfined dictionary, create a new dict that contains:\n"
-        f"\t1. ONLY students with marks >= 50\n"
-        f"\t2. Increase their marks by 5 but maximum mark is 100"
-)
-# predefined Dictionary
-students = { "Alice": 85, "Bob": 42, "Charlie": 73, "David": 30, "Eve": 100 }
-print(f"\nPredefined students dictionary : {students}")
+        f"\n\nTask 4 : \n"
+        f"List is mutable, changable in place." 
+        f"\nIn below code, whenever the car name starts with T, then it is poped." 
+        f"\nso the length of the loop is reduced whenever the item is poped."
+        f"\nHence will result in Index out of range error since some items starting with t is popped.\n\n")
 
 
-passed_students = {name : min(mark + 5, 100) for name,mark in  students.items() if mark >= 50}
+cars = ["Audi", "Toyota", "Tesla", "BMW"]
+print(f"\npredefined List cars {cars}")
 
-print(f"\nStudents with marks >= 50 and such marks added by 5 marks but maximum mark is 100: {passed_students}\n\n")
+try:
+    for i in range(len(cars)):
+        if cars[i].startswith("T"):
+            cars.pop(i)
+    print(cars)
+except IndexError as e:
+    print(f"Resulted in error : {e}")
+    
