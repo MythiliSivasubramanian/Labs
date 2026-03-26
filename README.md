@@ -5,7 +5,9 @@ Practice mini‑labs used to learn concepts before starting mini projects and fu
 ## Structure
 - `01_Python_Labs/` — Python practice labs.
 - `02_SQL_Labs/` — SQL practice labs.
-- '03_Numpy/' - Numoy practice labs 
+- '03_Numpy/' _ Numoy practice labs 
+- '04_Pandas/' _ Pandas
+
 
 ## Workflow
 - Work through small, focused exercises here.
