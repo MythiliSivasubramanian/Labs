@@ -7,7 +7,7 @@ Practice mini‑labs used to learn concepts before starting mini projects and fu
 - `02_SQL_Labs/` — SQL practice labs.
 - '03_Numpy/' _ Numoy practice labs 
 - '04_Pandas/' _ Pandas
-
+- '05_Probability&Statistics /' _ Probabilty statistics practice 
 
 ## Workflow
 - Work through small, focused exercises here.
