@@ -102,3 +102,27 @@ for car in cars[:]:  # copy
     if car.startswith("T"):
         cars.remove(car)
 print(f"Lists without car names starting with 'T' : {cars}")
+
+"""
+Given an predefined list of numbers, create a set that contains:
+
+    1.ONLY numbers greater than 3
+    2.Each number should be squared
+
+"""
+
+# Predefined list of numbers
+nums_1 = [1, 2, 2, 3, 4, 4, 5, 6, 6]
+
+print(
+        f"\n\nTask 4 : \n"
+        f"Given an predefined list of numbers, create a set that contains :\n" 
+        f"\t1.ONLY numbers greater than 3\n" 
+        f"\t2.Each number should be squared \n"
+        
+    )
+print(f"\npredefined List of numbers {nums_1}")
+
+# Set comprehension using {}
+my_set = {number ** 2 for number in nums_1 if number > 3}
+print(f"\nSet of numbers greater than 3 and square of it is : {my_set}\n\n")
