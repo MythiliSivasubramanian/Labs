@@ -1,17 +1,16 @@
 """
-Numpy foundations:
+NumPy foundations using the list my_list = [1, 2, 3, 4, 5].
 
-Predefined list my_list = [1, 2, 3, 4, 5].
+Task 1:
+Create a 1D NumPy array, multiply each element by 2, and subtract 1.
 
-Task 1. Create a 1D NumPy array from predefined List
-        Then:
-            1. Multiply each element by 2.
-            2. Subtract 1 from the result.
-            
-Task 2. Create a 2D array from the predefined List
-        Method 1 : Safe (without changing actual list) using Row or column vector (5, 1) and (1, 5)
-        Method 2 : Append actual list to match the len(list) = 2 * 3 or 3 * 2
+Task 2:
+Create a 2D array from the list.
+Method 1 uses (5, 1) or (1, 5).
+Method 2 appends one element and reshapes to (2, 3) or (3, 2).
 
+Task 3:
+Reshape an array into (2, 3), (3, 2), (2, -1), and (-1, 3).
 """
 
 import numpy as np
@@ -94,4 +93,23 @@ print(
         f"Dim is : {two_d_array_2.ndim}\n"
         
     )
+"""
+Task 3: Reshape a 1D array into different 2D shapes.
+"""
+arr = np.array([1, 2, 3, 4, 5, 6])
 
+# Reshape the array by giving both row and column values.
+# The same data is arranged as (2, 3) and (3, 2).
+
+print(
+        f"\n\n Task 3: Reshape arr to (2, 3) and (3, 2) :\n"
+        f"\n\tShape (2,3) :\n{arr.reshape(2,3)}\n"
+        f"\n\tShape (3,2) :\n{arr.reshape(3,2)}\n"
+    )
+
+# Use -1 to let NumPy automatically calculate  missing dimension.
+print(
+        f"\n\n Task 3: Reshape arr to (2, -1) and (-1, 3) :\n"
+        f"\n\tShape (2,-1) :\n{arr.reshape(2,-1)}\n"
+        f"\n\tShape (-1,3) :\n{arr.reshape(-1,3)}\n"
+    )
