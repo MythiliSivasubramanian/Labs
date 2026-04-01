@@ -5,6 +5,7 @@ Basic string operations in Python:
 3. String search, replace, and split
 4. String analysis and formatting
 5. Count character types in a string
+6. Check if a string is a palindrome
 """
 
 # Task 1: Indexing and Slicing
@@ -84,3 +85,15 @@ print(f"Letters: {letters}")
 print(f"Digits: {digits}")
 print(f"Spaces: {spaces}")
 print(f"Special characters: {special_chars}")
+
+# Task 6: Check if a String Is a Palindrome
+s6 = "madam"
+
+print("\nTask 6: Palindrome Check\n")
+
+cleaned_s6 = s6.replace(" ", "").lower()
+is_palindrome = cleaned_s6 == cleaned_s6[::-1]
+
+print(f"Original string: '{s6}'")
+print(f"Cleaned string: '{cleaned_s6}'")
+print(f"Is palindrome: {is_palindrome}")
