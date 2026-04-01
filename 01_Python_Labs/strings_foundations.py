@@ -4,6 +4,7 @@ Basic string operations in Python:
 2. String cleaning and transformation
 3. String search, replace, and split
 4. String analysis and formatting
+5. Count character types in a string
 """
 
 # Task 1: Indexing and Slicing
@@ -57,3 +58,29 @@ print(f"Original string: '{s4}'")
 print(f"Title case: '{s4.title()}'")
 print(f"Word count: {len(words)}")
 print(f"Vowel count: {vowel_count}")
+
+# Task 5: Count Character Types
+s5 = "Python 3.11 is fun!"
+
+print("\nTask 5: Count Character Types\n")
+
+letters = 0
+digits = 0
+spaces = 0
+special_chars = 0
+
+for char in s5:
+    if char.isalpha():
+        letters += 1
+    elif char.isdigit():
+        digits += 1
+    elif char.isspace():
+        spaces += 1
+    else:
+        special_chars += 1
+
+print(f"Original string: '{s5}'")
+print(f"Letters: {letters}")
+print(f"Digits: {digits}")
+print(f"Spaces: {spaces}")
+print(f"Special characters: {special_chars}")
