@@ -6,6 +6,7 @@ Basic string operations in Python:
 4. String analysis and formatting
 5. Count character types in a string
 6. Check if a string is a palindrome
+7. Check if two strings are anagrams
 """
 
 # Task 1: Indexing and Slicing
@@ -97,3 +98,19 @@ is_palindrome = cleaned_s6 == cleaned_s6[::-1]
 print(f"Original string: '{s6}'")
 print(f"Cleaned string: '{cleaned_s6}'")
 print(f"Is palindrome: {is_palindrome}")
+
+# Task 7: Check if Two Strings Are Anagrams
+s7_a = "listen"
+s7_b = "silent"
+
+print("\nTask 7: Anagram Check\n")
+
+cleaned_s7_a = s7_a.replace(" ", "").lower()
+cleaned_s7_b = s7_b.replace(" ", "").lower()
+is_anagram = sorted(cleaned_s7_a) == sorted(cleaned_s7_b)
+
+print(f"First string: '{s7_a}'")
+print(f"Second string: '{s7_b}'")
+print(f"Cleaned first string: '{cleaned_s7_a}'")
+print(f"Cleaned second string: '{cleaned_s7_b}'")
+print(f"Is anagram: {is_anagram}")
