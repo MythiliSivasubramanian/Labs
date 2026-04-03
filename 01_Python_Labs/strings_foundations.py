@@ -7,6 +7,7 @@ Basic string operations in Python:
 5. Count character types in a string
 6. Check if a string is a palindrome
 7. Check if two strings are anagrams
+8. Count the frequency of each word in a string
 """
 
 # Task 1: Indexing and Slicing
@@ -114,3 +115,21 @@ print(f"Second string: '{s7_b}'")
 print(f"Cleaned first string: '{cleaned_s7_a}'")
 print(f"Cleaned second string: '{cleaned_s7_b}'")
 print(f"Is anagram: {is_anagram}")
+
+# Task 8: Count the Frequency of Each Word in a String
+s8 = "python makes practice easy and python makes coding fun"
+
+print("\nTask 8: Word Frequency Count\n")
+
+words_s8 = s8.lower().split()
+unique_words = []
+word_counts = []
+
+for word in words_s8:
+    if word not in unique_words:
+        unique_words.append(word)
+        word_counts.append(words_s8.count(word))
+
+print(f"Original string: '{s8}'")
+print(f"Words: {words_s8}")
+print(f"Word frequencies: {list(zip(unique_words, word_counts))}")
