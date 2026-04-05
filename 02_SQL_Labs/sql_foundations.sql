@@ -74,3 +74,13 @@ INSERT INTO categories(category_id, category_name) VALUES
 SELECT product_name, price
 FROM products
 ORDER BY price DESC;
+
+-- 5. Show all orders placed by customer_id 1001
+SELECT *
+FROM orders
+WHERE customer_id = 1001;
+
+-- 6. Show product name and price for products that cost more than 100
+SELECT product_name, price
+FROM products
+WHERE price > 100;
