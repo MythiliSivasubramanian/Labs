@@ -69,6 +69,8 @@ INSERT INTO categories(category_id, category_name) VALUES
     (2, 'Accessories'),   
     (3, 'Displays'),  
     (4, 'Furniture');
- 
- 
-      
+
+-- 4. Show all products with their product name and price, sorted by price descending
+SELECT product_name, price
+FROM products
+ORDER BY price DESC;
