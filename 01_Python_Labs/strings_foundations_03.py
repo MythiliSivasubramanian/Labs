@@ -6,6 +6,7 @@ Strings foundations :
 3. Remove all spaces from a string
 4. Find the longest word in a sentence
 5. Capitalize the first letter of each word
+6. Count the number of words in a sentence
 
 """
 
@@ -127,4 +128,30 @@ final_string = " ".join(capitalized_words)
 print(
         f"\n\tUsing Loop :\n"
         f"\tCapitalized String : '{final_string}'\n"
+    )
+
+
+# 6. Count the number of words in a sentence
+
+# Predefined string
+s6 = "python practice makes coding habits stronger"
+
+# Method 1
+# Using split() and len()
+print(
+        f"\nCount the Number of Words in a Sentence :\n"
+        f"Original String : '{s6}'\n"
+        f"\n\tUsing split() and len() :\n"
+        f"\tWord Count : {len(s6.split())}\n"
+    )
+
+# Method 2
+# Using loop
+word_count = 0
+for word in s6.split():
+    word_count += 1
+
+print(
+        f"\n\tUsing Loop :\n"
+        f"\tWord Count : {word_count}\n"
     )
