@@ -7,6 +7,7 @@ Strings foundations :
 4. Find the longest word in a sentence
 5. Capitalize the first letter of each word
 6. Count the number of words in a sentence
+7. Check whether a string starts and ends with a given character
 
 """
 
@@ -154,4 +155,32 @@ for word in s6.split():
 print(
         f"\n\tUsing Loop :\n"
         f"\tWord Count : {word_count}\n"
+    )
+
+
+# 7. Check whether a string starts and ends with a given character
+
+# Predefined string
+s7 = "python"
+target_char = "p"
+end_char = "n"
+
+# Method 1
+# Using indexing
+print(
+        f"\nCheck Whether a String Starts and Ends with Given Characters :\n"
+        f"Original String : '{s7}'\n"
+        f"Start Character : '{target_char}'\n"
+        f"End Character : '{end_char}'\n"
+        f"\n\tUsing Indexing :\n"
+        f"\tStarts Correctly : {s7[0] == target_char}\n"
+        f"\tEnds Correctly : {s7[-1] == end_char}\n"
+    )
+
+# Method 2
+# Using startswith() and endswith()
+print(
+        f"\n\tUsing startswith() and endswith() :\n"
+        f"\tStarts Correctly : {s7.startswith(target_char)}\n"
+        f"\tEnds Correctly : {s7.endswith(end_char)}\n"
     )
