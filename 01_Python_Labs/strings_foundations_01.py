@@ -17,6 +17,8 @@ Strings Foundations
     
     5. Count the number of characters manually in : text = "python"
         (Without using Buildins)
+        
+    6. Count no of vowels are in text = "python"   (Without using Buildins)
     
 """
 
@@ -69,5 +71,17 @@ for character in text:
     characters_count += 1
 
 print(
-        f"Count no of characters in 'text' : {characters_count}\n"
+        f"Count no of characters in variable 'text' : {characters_count}\n"
+     )
+
+# 6. Count no of vowels in 'text'
+vowels = "AEIOUaeiou"
+vowels_count = 0
+
+for characters in text:
+    if characters in vowels:
+        vowels_count += 1
+
+print(
+        f"Count no of vowels in variable 'text' : {vowels_count}\n"
      )
