@@ -48,10 +48,25 @@ Current exercises include:
 - Re-implement the same task using a different approach when possible.
 - Use these labs as preparation before starting larger project work.
 
+## Running the files
 
+From the repository root:
 
+```bash
+python3 Labs/01_Python_Labs/strings_foundations.py
+python3 Labs/01_Python_Labs/lists_foundations.py
+python3 Labs/03_Numpy_Labs/01_foundations.py
+```
+
+For SQL practice, run the statements in:
+
+```text
+Labs/02_SQL_Labs/sql_foundations.sql
+```
+
+against a SQLite-compatible environment or your preferred SQL tool.
 
 ## Notes
 
 - Some labs are iterative practice versions of the same topic.
-
+- The `data_cleaning/` folder is currently structured as a step-by-step exercise scaffold, with some modules still left empty for future implementation.
