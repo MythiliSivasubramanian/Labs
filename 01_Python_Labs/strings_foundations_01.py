@@ -20,6 +20,8 @@ Strings Foundations
         
     6. Count no of vowels are in text = "python"   (Without using Buildins)
     
+    7. count frequency of each character in 'text'.
+    
 """
 
 # Predefined String
@@ -85,3 +87,23 @@ for characters in text:
 print(
         f"Count no of vowels in variable 'text' : {vowels_count}\n"
      )
+
+# 7. count frequency of each character in 'text'.
+# Convert to dioctionary with characters as keys and thier count as values
+
+my_dict = {}
+for char in text:
+   if char not in my_dict:
+       my_dict[char] = 1
+   else:
+       my_dict[char] += 1
+       
+       
+print(
+        f"\nCount frequency of each character in 'text' python :\n"
+    )
+
+for key, value in my_dict.items():
+    print(f"{key} appears {value} time")
+    
+    
