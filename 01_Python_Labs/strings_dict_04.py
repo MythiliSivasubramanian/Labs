@@ -3,6 +3,8 @@ Stings Foundations :
 
 1. Find the 1st character that appears the most times in given Input.
 2. Find the first Non-Repeating Character from the given Input
+3. check if two strings are Anagram (Among the 2 strings, same characters and same frequency))
+
 
 """
 
@@ -55,6 +57,19 @@ for char in user_input:
              )
         break
 if found == False:
-    print("\nNo non repeating characters")
+    print("\nNo non repeating characters\n")
+    
+# 3. check if two strings are Anagram
+
+# Predefined Strings s1 and s2
+s1 = "listen"
+s2 = "silent"
   
+s1_dict = {}
+s2_dict = {}
+for char in s1:
+    if char not in s1_dict:
+        s1_dict[char] = 1
+    else:
+        s1_dict[char] += 1
         
